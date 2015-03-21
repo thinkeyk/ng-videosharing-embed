@@ -101,7 +101,7 @@ angular.module('videosharing-embed').factory('RegisteredPlayers', [ 'PlayerConfi
             processSettings: function(settings, videoID) {
               return settings;
             },
-            playerID: 'www.facebook.com/video/embed?video_id=',
+            playerID: 'm.facebook.com/video/video.php?v=',
             playerRegExp: /([a-z\:\/]*\/\/)(?:www\.)?facebook\.com\/video.php\?v\=([A-Za-z0-9]+)/,
             timeRegExp: ''
         }
