@@ -102,7 +102,7 @@ angular.module('videosharing-embed').factory('RegisteredPlayers', [ 'PlayerConfi
               return settings;
             },
             playerID: 'www.facebook.com/video/embed?video_id=',
-            playerRegExp: /([a-z\:\/]*\/\/)(?:www\.)?facebook\.com\/v_show\/id_([A-Za-z0-9]+).html/,
+            playerRegExp: /([a-z\:\/]*\/\/)(?:www\.)?facebook\.com\/video.php\?v\=([A-Za-z0-9]+)/,
             timeRegExp: ''
         }
     };
