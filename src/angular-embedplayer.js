@@ -32,7 +32,7 @@ angular.module('videosharing-embed').factory('RegisteredPlayers', [ 'PlayerConfi
                 controls: 1,
                 loop: 0
             },
-            whitelist: ['autohide', 'cc_load_policy', 'color', 'disablekb', 'enablejsapi', 
+            whitelist: ['autohide', 'cc_load_policy', 'color', 'disablekb', 'enablejsapi',
                 'autoplay', 'controls', 'loop', 'playlist', 'rel', 'wmode', 'start', 'showinfo',
                 'end', 'fs', 'hl', 'iv_load_policy', 'list', 'listType', 'modestbranding', 'origin',
                 'playerapiid', 'playsinline', 'theme'],
@@ -71,7 +71,7 @@ angular.module('videosharing-embed').factory('RegisteredPlayers', [ 'PlayerConfi
                 autoPlay: 0,
                 logo: 0
             },
-            whitelist: ['api', 'autoPlay', 'background', 'chromeless', 'controls', 'foreground', 'highlight', 'html', 
+            whitelist: ['api', 'autoPlay', 'background', 'chromeless', 'controls', 'foreground', 'highlight', 'html',
                 'id', 'info', 'logo', 'network', 'quality', 'related', 'startscreen', 'webkit-playsinline', 'syndication'],
             transformAttrMap: {},
             processSettings : function(settings, videoID) {
@@ -91,6 +91,18 @@ angular.module('videosharing-embed').factory('RegisteredPlayers', [ 'PlayerConfi
             },
             playerID: 'player.youku.com/embed/',
             playerRegExp: /([a-z\:\/]*\/\/)(?:www\.)?youku\.com\/v_show\/id_([A-Za-z0-9]+).html/,
+            timeRegExp: ''
+        },
+        facebook: {
+            type: "facebook",
+            settings: {},
+            whitelist: [],
+            transformAttrMap: {},
+            processSettings: function(settings, videoID) {
+              return settings;
+            },
+            playerID: 'www.facebook.com/video/embed?video_id=',
+            playerRegExp: /([a-z\:\/]*\/\/)(?:www\.)?facebook\.com\/v_show\/id_([A-Za-z0-9]+).html/,
             timeRegExp: ''
         }
     };
